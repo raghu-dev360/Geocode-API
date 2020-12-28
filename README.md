@@ -1,6 +1,6 @@
-## Geocode API Task
+# Geocode API Task
 
-# Please update Geocode "API_KEY" in settings.py file under "INSTALLED_APPS"
+## Please update Geocode "API_KEY" in settings.py file below "INSTALLED_APPS"
 
 Admin Credentials:
 
