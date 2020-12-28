@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+ {% load static %}
+  {% block content %}
+<div class="container">
+  <div class="jumbotron">
+
+    <h1 align='center'>Upload Address File</h1><br><br>
+    <form class="" enctype="multipart/form-data"  method="POST">
+      {{form}}
+      {% csrf_token %}
+      <input class="btn btn-success" type="submit" value="submit">
+    </form>
+    {% for message in messages %}
+            <li class="{{ message.tags }}">{{ message }}</li>
+            {% endfor %}
+    <br><br>
+    <b>Please download the updated file with Latitude and Longitude values ==> </b>
+    <a href="{{file_obj.file.url}}" download="{{file_obj.file.url}}"><button class="btn btn-info" type="button" name="button">Download</button></a>
+
+
+       </div>
+
+     </div>
+    {% endblock %}
